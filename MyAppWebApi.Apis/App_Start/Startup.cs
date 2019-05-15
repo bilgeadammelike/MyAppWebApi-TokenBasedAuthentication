@@ -13,13 +13,10 @@ namespace MyAppWebApi.Apis.App_Start
     {
         public void Configuration(IAppBuilder appBuilder)
         {
-
             HttpConfiguration httpConfiguration = new HttpConfiguration();
             ConfigureOAuth(appBuilder);
             WebApiConfig.Register(httpConfiguration);
             appBuilder.UseWebApi(httpConfiguration);
-
-
         }
 
         private void ConfigureOAuth(IAppBuilder appBuilder)
